@@ -80,7 +80,7 @@
     <div class="th-menu-wrapper">
         <div class="th-menu-area">
             <div class="mobile-logo">
-                <a href="index.html"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
+                <a href="{% url 'home' %}"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
                 <div class="close-menu">
                     <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
                 </div>
@@ -88,16 +88,16 @@
             <div class="th-mobile-menu">
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'home' %}">Home</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="{% url 'services' %}">Services</a>
                     </li>
                     <li>
-                        <a href="#">Gallery</a>
+                        <a href="{% url 'gallery' %}">Gallery</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="{% url 'contact' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +137,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html">
+                                <a href="{% url 'home' %}">
                                     <img src="/static/img/wp_logo_120x117.jpg" alt="White Point">
                                 </a>
                             </div>
@@ -146,16 +146,16 @@
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <a href="{% url 'home' %}">Home</a>
                                     </li>
                                     <li>
-                                        <a href="#">Services</a>
+                                        <a href="{% url 'services' %}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="#">Gallery</a>
+                                        <a href="{% url 'gallery' %}">Gallery</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">Contact Us</a>
+                                        <a href="{% url 'contact' %}">Contact Us</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -163,7 +163,7 @@
                         </div>
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-button">
-                                <a href="appointment.html" class="th-btn">Appointment Now</a>
+                                <a href="{% url 'appointment' %}" class="th-btn">Appointment Now</a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +184,7 @@ Hero Area
                             <div class="hero-style1">
                                 <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Skincare</span>
                                 <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Indulge in self-care. Call us to schedule your skincare bliss. </h1>
-                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="service.html" class="th-btn">Explore Services</a>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +205,7 @@ Hero Area
                             <div class="hero-style1">
                                 <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Massages</span>
                                 <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Elevate your self-care routine with a massage. Schedule today! </h1>
-                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="service.html" class="th-btn">Explore Services</a>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +226,7 @@ Hero Area
                             <div class="hero-style1">
                                 <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Waxing</span>
                                 <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Feel flawless, be fearless. Reserve your waxing session! </h1>
-                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="service.html" class="th-btn">Explore Services</a>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +274,7 @@ Service Area
                                 <img src="/static/img/icon/service_1_1.svg" alt="Icon">
                             </div>
                         </div>
-                        <h3 class="box-title"><a href="service-details.html">Body Massages</a></h3>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Body Massages</a></h3>
                         <p class="service-box_text">Unwind and rejuvenate with our exquisite body massage services tailored just for you.</p>
                     </div>
                 </div>
@@ -287,7 +287,7 @@ Service Area
                                 <img src="/static/img/icon/service_4_2.svg" alt="Icon">
                             </div>
                         </div>
-                        <h3 class="box-title"><a href="service-details.html">Skincare</a></h3>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Skincare</a></h3>
                         <p class="service-box_text">Our estheticians craft personalized skincare treatments tailored to meet your specific needs.</p>
                     </div>
                 </div>
@@ -300,7 +300,7 @@ Service Area
                                 <img src="/static/img/icon/service_4_1.svg" alt="Icon">
                             </div>
                         </div>
-                        <h3 class="box-title"><a href="service-details.html">Back Cleansing & Exfoliation</a></h3>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Back Cleansing & Exfoliation</a></h3>
                         <p class="service-box_text">Our expert estheticians use gentle yet effective techniques to cleanse your skin, and remove built-up toxins. </p>
                     </div>
                 </div>
@@ -313,7 +313,7 @@ Service Area
                                 <img src="/static/img/icon/service_1_4.svg" alt="Icon">
                             </div>
                         </div>
-                        <h3 class="box-title"><a href="service-details.html">Waxing</a></h3>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Waxing</a></h3>
                         <p class="service-box_text">Our specially formulated waxes are designed to minimize discomfort, leaving your skin feeling soft and irritation-free.</p>
                     </div>
                 </div>
@@ -393,6 +393,9 @@ Gallery Area
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="btn-group justify-content-center justify-content-lg-start">
+                <a href="{% url 'gallery' %}"><button class="th-btn">Explore More</button></a>
             </div>
         </div>
         <div class="shape-mockup jump d-none d-xl-block" data-bottom="15%" data-left="0%"><img src="/static/img/shape/leaves_1.png" alt="shape">
@@ -618,9 +621,9 @@ Appointment Area
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="index.html"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
+                                    <a href="{% url 'home' %}"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
                                 </div>
-                                <p class="about-text">Reveal You Radiance: Where Beauty Meets Expertise</p>
+                                <p class="about-text">Reveal Your Radiance: Where Beauty Meets Expertise</p>
                                 <div class="working-time">
                                     <span class="title">We Are Available:</span>
                                     <p class="desc">Mon-Sat: 08.00 am to 5.00 pm</p>
@@ -638,10 +641,10 @@ Appointment Area
                             <h3 class="widget_title">Quick link</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="booking.html">Gallery</a></li>
-                                    <li><a href="contact.html">Privacy Policy</a></li>
-                                    <li><a href="service.html">Services</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li><a href="{% url 'contact' %}">Privacy Policy</a></li>
+                                    <li><a href="{% url 'services' %}">Services</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -687,8 +690,8 @@ Appointment Area
                     <div class="col-lg-6">
                         <div class="footer-links">
                             <ul>
-                                <li><a href="contact.html">Terms & Conditions</a></li>
-                                <li><a href="contact.html">Terms &amp; Condition</a></li>
+                                <li><a href="{% url 'contact' %}">Terms & Conditions</a></li>
+                                <li><a href="{% url 'contact' %}">Terms &amp; Condition</a></li>
                             </ul>
                         </div>
                     </div>
