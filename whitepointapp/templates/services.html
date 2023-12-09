@@ -1,4 +1,162 @@
 {% extends "base.html" %} {% block title %} Services {% endblock %}
 {% block content %}
-<p>Services</p>
+<div class="breadcumb-wrapper " data-bg-src="/static/img/wp_blackwhitemassage_1920x800.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h2 class="breadcumb-title">Services</h2>
+        </div>
+    </div>
+</div>
+
+<section class="space">
+    <div class="container">
+        <div class="row gy-5">
+
+            <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="service-box wow fadeInUp">
+                    <div class="service-box_icon">
+                        <div class="global-icon">
+                            <img src="/static/img/icon/service_1_1.svg" alt="Icon">
+                        </div>
+                    </div>
+                    <h3 class="box-title"><a href="{% url 'services' %}">Body Massages</a></h3>
+                    <p class="service-box_text">Unwind and rejuvenate with our exquisite body massage services tailored just for you.</p>
+                </div>
+                <div class="service-img">
+                    <img src="/static/img/service/wp_backrub_283x150.jpg" alt="Service">
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="service-box wow fadeInUp">
+                    <div class="service-box_icon">
+                        <div class="global-icon">
+                            <img src="/static/img/icon/service_4_2.svg" alt="Icon">
+                        </div>
+                    </div>
+                    <h3 class="box-title"><a href="{% url 'services' %}">Skincare</a></h3>
+                    <p class="service-box_text">Our estheticians craft personalized skincare treatments tailored to meet your specific needs.</p>
+                </div>
+                <div class="service-img">
+                    <img src="/static/img/service/wp_facialbrowncream_282x150.jpg" alt="Service">
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="service-box wow fadeInUp">
+                    <div class="service-box_icon">
+                        <div class="global-icon">
+                            <img src="/static/img/icon/service_4_1.svg" alt="Icon">
+                        </div>
+                    </div>
+                    <h3 class="box-title"><a href="{% url 'services' %}">Back Cleansing & Exfoliation</a></h3>
+                    <p class="service-box_text">Our expert estheticians use gentle yet effective techniques to cleanse your skin, and remove built-up toxins. </p>
+                </div>
+                <div class="service-img">
+                    <img src="/static/img/service/wp_oilmassage_283x150.jpg" alt="Service">
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="service-box wow fadeInUp">
+                    <div class="service-box_icon">
+                        <div class="global-icon">
+                            <img src="/static/img/icon/service_1_4.svg" alt="Icon">
+                        </div>
+                    </div>
+                    <h3 class="box-title"><a href="{% url 'services' %}">Waxing</a></h3>
+                    <p class="service-box_text">Our specially formulated waxes are designed to minimize discomfort, leaving your skin feeling soft and irritation-free.</p>
+                </div>
+                <div class="service-img">
+                    <img src="/static/img/service/wp_waxing_282x150.jpg" alt="Service">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
+                <div>
+                    <div class="service-box">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/icons8-face-roller-64.png" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service-details.html">Wood Therapy</a></h3>
+                        <p class="service-box_text">We also offer private rooms for more intimate treatments and couples.</p>
+
+                    </div>
+                    <div class="service-img">
+                        <img src="/static/img/service/service_2_8.jpg" alt="Service">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="0%"><img src="/static/img/shape/leaves_1.png" alt="shape">
+    </div>
+    <div class="shape-mockup jump d-none d-xl-block" data-top="20%" data-right="0%"><img src="/static/img/shape/leaves_7.png" alt="shape">
+    </div>
+</section>
+    <!--==============================
+appointment Area  
+==============================-->
+<div class="appointment-sec bg-top-center space" id="contact-sec" data-bg-src="/static/img/bg/brown_1920x310.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 wow fadeInLeft">
+                <div class="title-area mb-25 text-center text-lg-start">
+                    <span class="sub-title text-white">Make An Appointment<img src="/static/img/theme-img/title_right2.svg" alt=""></span>
+                    <h2 class="sec-title text-white">Experience the Joy of Beautiful Skin.</h2>
+                </div>
+                <div class="appointment-work  text-center text-lg-start">
+                    <h4 class="work-title">Working Hours:</h4>
+                    <p>We are dedicated to delivering exceptional results and ensuring your skin reflects the beauty that lives inside your soul.</p>
+                    <ul class="working-list">
+                        <li>Monday to Friday<span>09:00am - 20:00pm</span></li>
+                        <li>Saturday<span>10:00am - 18:00pm</span></li>
+                        <li>Sunday<span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-quote-form wow fadeInUp">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" placeholder="First Name" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" placeholder="Last Name" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" placeholder="Email Address" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" placeholder="Phone Number" class="form-control">
+                        </div>
+                        <div class="form-group col-12">
+                            <select name="subject" id="subject" class="form-select nice-select">
+                                <option value="" disabled selected hidden>Select Subject</option>
+                                <option value="Massages">Massages</option>
+                                <option value="Waxing">Waxing</option>
+                                <option value="Skincare">Skincare</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                        </div>
+                        <div class="btn-group justify-content-center justify-content-xl-start">
+                            <button class="th-btn style3 fw-btn">Make An Appointment</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
