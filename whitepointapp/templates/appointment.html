@@ -1,4 +1,58 @@
 {% extends "base.html" %} {% block title %} Request Appointments {% endblock %}
 {% block content %}
-<p>Request Appointments</p>
+<div class="breadcumb-wrapper " data-bg-src="/static/img/request_appointment_background_1920x800.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h2 class="breadcumb-title">Request Appointment</h2>
+        </div>
+    </div>
+</div>
+
+<div class="position-relative space">
+    <div class="container">
+        <form action="booking.php" method="POST" class="booking-form-area ajax-booking">
+            <div class="booking-title-area">
+                <div class="title-area mb-40 text-center wow fadeInUp">
+                    <span class="sub-title style2">Come Visit Us</span>
+                    <img src="assets/img/theme-img/title_shape_1.svg" alt="">
+                    <h2 class="sec-title">Make Your Appointment Now</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="text" placeholder="First Name" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" placeholder="Last Name" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="text" placeholder="Phone" class="form-control">
+                </div>
+                <div class="form-group col-12">
+                    <select name="subject" id="subject" class="form-select nice-select">
+                        <option value="" disabled selected hidden>Select Service</option>
+                                        <option value="Massages">Massages</option>
+                                        <option value="Waxing">Waxing</option>
+                                        <option value="Skincare">Skincare</option>
+                    </select>
+                </div>
+                <div class="form-group col-12">
+                    <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                </div>
+                <div class="form-group col-12">
+                    <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                </div>
+                <div class="btn-group justify-content-center justify-content-lg-start">
+                    <button class="th-btn fw-btn">Make An Appointment</button>
+                </div>
+            </div>
+            <p class="form-messages mb-0 mt-3"></p>
+        </form>
+    </div>
+
+</div>
+
 {% endblock %}

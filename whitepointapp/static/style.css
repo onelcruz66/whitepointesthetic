@@ -7930,7 +7930,7 @@ ol.wp-block-rss {
 
 .breadcumb-title {
   color: white;
-  margin: -0.20em 0 -0.18em 0;
+  margin: -0.20em 0 -0.18em -100px;
   line-height: 1.1;
   font-weight: 600;
 }
