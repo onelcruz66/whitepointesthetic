@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block title %} Request Appointments {% endblock %}
+{% load widget_tweaks %}
 {% block content %}
 <div class="breadcumb-wrapper " data-bg-src="/static/img/request_appointment_background_1920x800.jpg">
     <div class="container">
@@ -10,7 +11,7 @@
 
 <div class="position-relative space">
     <div class="container">
-        <form action="booking.php" method="POST" class="booking-form-area ajax-booking">
+        <form action="/appointment/" method="POST" class="booking-form-area">
             <div class="booking-title-area">
                 <div class="title-area mb-40 text-center wow fadeInUp">
                     <span class="sub-title style2">Come Visit Us</span>
@@ -18,38 +19,33 @@
                     <h2 class="sec-title">Make Your Appointment Now</h2>
                 </div>
             </div>
+            {% csrf_token %}
             <div class="row">
                 <div class="form-group col-md-6">
-                    <input type="text" placeholder="First Name" class="form-control">
+                    {% render_field form.first_name placeholder="First Name" class+="form-control" %}
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" placeholder="Last Name" class="form-control">
+                    {% render_field form.last_name placeholder="Last Name" class+="form-control" %}
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" placeholder="Email" class="form-control">
+                    {% render_field form.email_address placeholder="Email Address" class+="form-control" %}
                 </div>
-                <div class="col-md-6 form-group">
-                    <input type="text" placeholder="Phone" class="form-control">
-                </div>
-                <div class="form-group col-12">
-                    <select name="subject" id="subject" class="form-select nice-select">
-                        <option value="" disabled selected hidden>Select Service</option>
-                                        <option value="Massages">Massages</option>
-                                        <option value="Waxing">Waxing</option>
-                                        <option value="Skincare">Skincare</option>
-                    </select>
+                <div class="form-group col-md-6">
+                    {% render_field form.phone_number placeholder="Phone Number" class+="form-control" %}
                 </div>
                 <div class="form-group col-12">
-                    <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                    {% render_field form.service placeholder="Service" class+="form-control" %}
                 </div>
                 <div class="form-group col-12">
-                    <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                    {% render_field form.date placeholder="Select Date" class+="date-pick form-control" %}
                 </div>
-                <div class="btn-group justify-content-center justify-content-lg-start">
-                    <button class="th-btn fw-btn">Make An Appointment</button>
+                <div class="form-group col-12">
+                    {% render_field form.time placeholder="Select Time" class+="time-pick form-control" %}
                 </div>
             </div>
-            <p class="form-messages mb-0 mt-3"></p>
+            <div class="btn-group justify-content-center justify-content-lg-start">
+                <button type="submit" class="th-btn fw-btn">Make An Appointment</button>
+            </div>
         </form>
     </div>
 

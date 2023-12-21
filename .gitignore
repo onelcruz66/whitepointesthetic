@@ -1,0 +1,12 @@
+venv
+whitepointapp/migrations/__pycache__/*
+whitepointapp/__pycache__/
+Dockerfile
+.dockerignore
+docker-compose.yml
+whitepoint/.ebextensions/
+whitepoint/__pycache__/
+whitepoint.zip
+whitepointapp/static/img/IMG_0.MOV
+whitepointapp/static/img/wp_video.mp4
+.env

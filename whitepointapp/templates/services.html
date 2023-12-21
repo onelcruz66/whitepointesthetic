@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block title %} Services {% endblock %}
+{% load widget_tweaks %}
 {% block content %}
 <div class="breadcumb-wrapper " data-bg-src="/static/img/wp_blackwhitemassage_1920x800.jpg">
     <div class="container">
@@ -121,38 +122,35 @@ appointment Area
             </div>
             <div class="col-lg-6">
                 <div class="appointment-quote-form wow fadeInUp">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <input type="text" placeholder="First Name" class="form-control">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" placeholder="Last Name" class="form-control">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" placeholder="Email Address" class="form-control">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" placeholder="Phone Number" class="form-control">
-                        </div>
-                        <div class="form-group col-12">
-                            <select name="subject" id="subject" class="form-select nice-select">
-                                <option value="" disabled selected hidden>Select Subject</option>
-                                <option value="Massages">Massages</option>
-                                <option value="Waxing">Waxing</option>
-                                <option value="Skincare">Skincare</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-12">
-                            <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
-                        </div>
-                        <div class="form-group col-12">
-                            <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                    <form action="/services/" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                {% render_field form.first_name placeholder="First Name" class+="form-control" %}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {% render_field form.last_name placeholder="Last Name" class+="form-control" %}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {% render_field form.email_address placeholder="Email Address" class+="form-control" %}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {% render_field form.phone_number placeholder="Phone Number" class+="form-control" %}
+                            </div>
+                            <div class="form-group col-12">
+                                {% render_field form.service placeholder="Service" class+="form-control" %}
+                            </div>
+                            <div class="form-group col-12">
+                                {% render_field form.date placeholder="Select Date" class+="date-pick form-control" %}
+                            </div>
+                            <div class="form-group col-12">
+                                {% render_field form.time placeholder="Select Time" class+="time-pick form-control" %}
+                            </div>
                         </div>
                         <div class="btn-group justify-content-center justify-content-xl-start">
-                            <button class="th-btn style3 fw-btn">Make An Appointment</button>
-
+                            <button type="submit" class="th-btn style3 fw-btn">Make An Appointment</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

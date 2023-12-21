@@ -1,0 +1,750 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>White Point Esthetic</title>
+    <meta name="description" content="White Point Esthetic - Esthetician Salon located in Aguada, Puerto Rico.  We provide skincare, massage, and waxing services to customers.">
+    <meta name="keywords" content="Esthetician, skincare, skin care, facial, estetica, cuidado de piel, esteticista, massage, waxing, wax, hair removal, Aguada, Puerto Rico">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    {% load static %}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="{% static 'fontawesome.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'magnific-popup.min.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="{% static 'slick.min.css' %}">
+    <!-- odometer -->
+    <link rel="stylesheet" href="{% static 'odometer-theme-default.css' %}">
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="{% static 'jquery.datetimepicker.min.css' %}">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+
+
+    <!--==============================
+     Preloader
+  ==============================-->
+    <div class="preloader ">
+        <div class="preloader-inner">
+            <img src="/static/img/wp_logo_120x117.jpg" alt="White Point">
+            <span class="loader"></span>
+        </div>
+    </div>
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area">
+            <div class="mobile-logo">
+                <a href="{% url 'home' %}"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
+                <div class="close-menu">
+                    <button class="th-menu-toggle"><ion-icon name="close-outline"></ion-icon></button>
+                </div>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'services' %}">Services</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+	Header Area
+==============================-->
+    <header class="th-header header-layout1">
+        <div class="header-top">
+            <div class="container th-container">
+                <div class="row justify-content-end justify-content-lg-between align-items-center gy-2">
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="header-links">
+                            <ul>
+                                <li><ion-icon name="call-outline"></ion-icon><a href="tel: +17873616311">+1 787-361-6311</a></li><!-- <i class="far fa-phone"></i> -->
+                                <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:kateryvalle@gmail.com">kateryvalle@gmail.com</a></li>
+                                <li><ion-icon name="timer-outline"></ion-icon>Tue - Sat: 9 AM - 6 PM </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="social-links"><span class="social-title">Follow Us:</span>
+                            <a href="https://www.facebook.com/profile.php?id=61553164417953" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="https://www.tiktok.com/@kateryvallegalloz?_t=8hLEqWS25p0&_r=1"><ion-icon name="logo-tiktok"></ion-icon></a>
+                            <a href="https://www.instagram.com/whitepoint_estethic"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container th-container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="{% url 'home' %}">
+                                    <img src="/static/img/wp_logo_120x117.jpg" alt="White Point">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto me-xl-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'services' %}">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'gallery' %}">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'contact' %}">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <button class="th-menu-toggle d-inline-block d-lg-none"><ion-icon name="menu-outline"></ion-icon></button>
+                        </div>
+                        <div class="col-auto d-none d-xl-block">
+                            <div class="header-button">
+                                <a href="{% url 'appointment' %}" class="th-btn">Appointment Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="logo-bg"></div> -->
+            </div>
+        </div>
+    </header>
+    <!--==============================
+Hero Area
+==============================-->
+    <section class="th-hero-wrapper hero-1" id="hero" data-bg-src="/static/img/brown_1920x800.jpg">
+        <div class="hero-slider-1 th-carousel" data-fade="true" data-slide-show="1" data-md-slide-show="1">
+            <div class="th-hero-slide">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-lg-6 col-xl-7">
+                            <div class="hero-style1">
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Skincare</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Indulge in self-care. Call us to schedule your skincare bliss. </h1>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.2s">
+                                <img src="/static/img/wp_facialwhitecream_800x800.jpg" alt="skincare">
+                                <div class="th-hero-shape" data-ani="slideinright" data-ani-delay="0.4s"></div>
+                                <div class="th-hero-shape2" data-ani="slideinright" data-ani-delay="0.7s"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="th-hero-slide">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-lg-6 col-xl-7">
+                            <div class="hero-style1">
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Massages</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Elevate your self-care routine with a massage. Schedule today! </h1>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.2s">
+                                <img src="/static/img/wp_backrub_800x800.jpg" alt="">
+                                <div class="th-hero-shape" data-ani="slideinright" data-ani-delay="0.4s"></div>
+                                <div class="th-hero-shape2" data-ani="slideinright" data-ani-delay="0.7s"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="th-hero-slide">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-lg-6 col-xl-7">
+                            <div class="hero-style1">
+                                <span class="sub-title" data-ani="slideindown" data-ani-delay="0.2s"><img src="/static/img/theme-img/title_left.svg" alt="shape" class="small-logo">White Point Esthetic Waxing</span>
+                                <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Feel flawless, be fearless. Reserve your waxing session! </h1>
+                                <div class="btn-group  justify-content-center justify-content-lg-start" data-ani="slideindown" data-ani-delay="0.4s"><a href="{% url 'services' %}" class="th-btn">Explore Services</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.2s">
+                                <img src="/static/img/wp_legsbathtub_800x800.jpg" alt="">
+                                <div class="th-hero-shape" data-ani="slideinright" data-ani-delay="0.4s"></div>
+                                <div class="th-hero-shape2" data-ani="slideinright" data-ani-delay="0.7s"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shape-mockup movingX d-none d-xl-block" data-top="12%" data-left="2%"><img src="/static/img/shape/flower_shape.svg" alt="shape">
+        </div>
+        <div class="shape-mockup shape2 jump" data-bottom="10%" data-left="0%"><img src="/static/img/shape/flower_1_3.svg" alt="shape">
+        </div>
+
+        <div class="shape-mockup hero_wrap d-none d-xl-block spin" data-top="3%" data-right="38%"><img src="/static/img/shape/flower_1_4.svg" alt="shape">
+        </div>
+        <div class="hero_flower bg-repeat movingX" data-bg-src="/static/img/shape/flower_shape.png"></div>
+    </section>
+
+    <!--======== / Hero Section ========-->
+    <!--==============================
+Service Area  
+==============================-->
+    <section class="service-area2 overflow-hidden space" id="service-sec">
+        <div class="container">
+            <div class="row">
+                <div class="title-area text-center">
+                    <span class="sub-title style2">What We Do</span>
+                    <img src="/static/img/theme-img/title_shape_1.svg" alt="">
+                    <h2 class="sec-title">Professional Spa and Beauty Service</h2>
+                </div>
+            </div>
+            <div class="row slider-shadow th-carousel number-dots" id="serviceSlide" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-box wow fadeInUp">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/service_1_1.svg" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Body Massages</a></h3>
+                        <p class="service-box_text">Unwind and rejuvenate with our exquisite body massage services tailored just for you.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-box wow fadeInUp">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/service_4_2.svg" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Skincare</a></h3>
+                        <p class="service-box_text">Our estheticians craft personalized skincare treatments tailored to meet your specific needs.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-box wow fadeInUp">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/service_4_1.svg" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Back Cleansing & Exfoliation</a></h3>
+                        <p class="service-box_text">Our expert estheticians use gentle yet effective techniques to cleanse your skin, and remove built-up toxins. </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-box wow fadeInUp">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/service_1_4.svg" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="{% url 'services' %}">Waxing</a></h3>
+                        <p class="service-box_text">Our specially formulated waxes are designed to minimize discomfort, leaving your skin feeling soft and irritation-free.</p>
+                    </div>
+                </div>
+
+
+                <!-- <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="service-box wow fadeInUp">
+                        <div class="service-box_icon">
+                            <div class="global-icon">
+                                <img src="/static/img/icon/service_1_5.svg" alt="Icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service-details.html">Nail Manicure</a></h3>
+                        <p class="service-box_text">Relax in our serene lounge area, sip on herbal teas, and immerse yourself.</p>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="0%"><img src="/static/img/shape/leaves_1.png" alt="shape">
+        </div>
+        <div class="shape-mockup jump d-none d-xl-block" data-top="20%" data-right="0%"><img src="/static/img/shape/leaves_7.png" alt="shape">
+        </div>
+    </section>
+    
+    <!--==============================
+Gallery Area  
+==============================-->
+    <div class="overflow-hidden space">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="title-area text-center text-lg-start">
+                        <span class="sub-title">Gallery
+                            <img src="/static/img/theme-img/title_right.svg" alt=""></span>
+                        <h2 class="sec-title">Explore Our Gallery</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row gallery-row filter-active">
+                <div class="col-xl-auto col-md-6 filter-item cat1 cat3 cat4">
+                    <div class="gallery-card wow fadeInUp">
+                        <div class="gallery-img">
+                            <img src="/static/img/gallery/wp_ac_491x755.jpg" alt="gallery image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-md-6 filter-item cat1 cat2 cat4">
+                    <div class="gallery-card wow fadeInUp">
+                        <div class="gallery-img">
+                            <img src="/static/img/gallery/wp_bed2_699x400.jpg" alt="gallery image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-md-6 filter-item cat1 cat3 cat4">
+                    <div class="gallery-card wow fadeInUp">
+                        <div class="gallery-img">
+                            <img src="/static/img/gallery/wp_meditate_387x325.jpg" alt="gallery image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-md-6 filter-item cat3 cat4 cat2">
+                    <div class="gallery-card wow fadeInUp">
+                        <div class="gallery-img">
+                            <img src="/static/img/gallery/wp_mirror2_282x325.jpg" alt="gallery image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group justify-content-center justify-content-lg-start">
+                <a href="{% url 'gallery' %}"><button class="th-btn">Explore More</button></a>
+            </div>
+        </div>
+        <div class="shape-mockup jump d-none d-xl-block" data-bottom="15%" data-left="0%"><img src="/static/img/shape/leaves_1.png" alt="shape">
+        </div>
+        <div class="shape-mockup jump d-none d-xxl-block" data-top="10%" data-right="0%"><img src="/static/img/shape/leaves_7.png" alt="shape">
+        </div>
+    </div>
+    
+    <!--==============================
+Price Area  
+==============================-->
+    <section class="overflow-hidden space-bottom">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title style2">Pricing</span>
+                <img src="/static/img/theme-img/title_shape_1.svg" alt="">
+                <h1>Pricing to Fit Your Needs</h1>
+            </div>
+            <div class="row gy-4 align-items-center">
+
+                <div class="col-xl-6">
+                    <div class="price-card wow fadeInLeft">
+                        <div class="price-card_img">
+                            <img src="/static/img/price/wp_backrub_243x360.jpg" alt="">
+                            <!-- <h4 class="price-card_price">
+                                <span class="currency">$</span>
+                                45 <span class="duration">Starting</span>
+                            </h4> -->
+                        </div>
+                        <div class="price-card_content">
+                            <h3 class="box-title">
+                                Massages </h3>
+                            <hr class="style1">
+                            <div class="available-list">
+                                <ul>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Brief Massage $45</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Long Massage $70</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Wood Therapy $65</li>
+                                </ul>
+                                <!--<div class="price-btn">
+                                    <a href="price.html" class="th-btn">Book Now<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6">
+                    <div class="price-card wow fadeInRight">
+                        <div class="price-card_img">
+                            <img src="/static/img/price/wp_oilmassage_243x360.jpg" alt="">
+                            <h4 class="price-card_price">
+                                <span class="currency">$</span>
+                                70
+                            </h4>
+                        </div>
+                        <div class="price-card_content">
+                            <h3 class="box-title">
+                                Back Cleaning Package</h3>
+                            <hr class="style1">
+                            <div class="available-list">
+                                <ul>
+                                    <li><b>Package Includes:</b></li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Back Cleaning</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Back Exfoliation</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Massage</li>
+                                </ul>
+                                <!--<div class="price-btn">
+                                    <a href="price.html" class="th-btn">Book Now<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-auto">
+                    <div class="price-card wow fadeInLeft">
+                        <div class="price-card_img">
+                            <img src="/static/img/price/wp_manclosedeyes_243x360.jpg" alt="">
+                            <!-- <h4 class="price-card_price">
+                                <span class="currency">$</span>
+                                45 <span class="duration">Starting</span>
+                            </h4> -->
+                        </div>
+                        <div class="price-card_content">
+                            <h3 class="box-title">
+                                Skincare </h3>
+                            <hr class="style1">
+                            <div class="available-list">
+                                <ul>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Facial Massage $45</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Ultra Sound $50</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Wood Therapy Facial Massage $50</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Facial $55</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Acne Treatments $55</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Rosacea Treatments $55</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Deep Cleaning $60</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Spot Treatments $65</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Radiofrequency $65</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Dermaplaning $70</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Microdermabrasion $70</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Lip Hydration w/ Microthreading $70</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Anti-Aging Treatments $75</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Oxigenation $80</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Hydration Shock $85</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Chemical Peeling $100</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Dermapen $120 +</li>
+                                </ul>
+                                <!--<div class="price-btn">
+                                    <a href="price.html" class="th-btn">Book Now<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-auto">
+                    <div class="price-card wow fadeInLeft">
+                        <div class="price-card_img">
+                            <img src="/static/img/price/wp_waxing_243x360.jpg" alt="">
+                            <!-- <h4 class="price-card_price">
+                                <span class="currency">$</span>
+                                45 <span class="duration">Starting</span>
+                            </h4> -->
+                        </div>
+                        <div class="price-card_content">
+                            <h3 class="box-title">
+                                Waxing </h3>
+                            <hr class="style1">
+                            <div class="available-list">
+                                <ul>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Armpits $35</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Arms $60</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">1/2 Arms $45</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Abdomen $45</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Legs $75</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">1/2 Legs $50</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Thighs $45</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Glutes $50</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Eyebrows $12</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Fuzz $10</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Back $60</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Bikini Line $55</li>
+                                    <li><img src="/static/img/theme-img/title_left.svg" alt="">Brazilian $65</li>
+                                </ul>
+                                <!--<div class="price-btn">
+                                    <a href="price.html" class="th-btn">Book Now<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="shape-mockup jump  d-none d-lg-block" data-top="0%" data-left="0%"><img src="/static/img/shape/leaves_3.png" alt="shape">
+        </div>
+        <div class="shape-mockup jump d-none d-xl-block" data-bottom="15%" data-right="0%"><img src="/static/img/shape/leaves_2.png" alt="shape">
+        </div>
+    </section>
+    <!--==============================
+Appointment Area  
+==============================-->
+    <div class="appointment-area space" id="contact-sec" data-bg-src="/static/img/wp_facialwhitecream_1920x800.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="appointment-content">
+                        <div class="title-area mb-25 text-center text-lg-start wow fadeInLeft">
+                            <span class="sub-title">Come Visit Us<img src="/static/img/theme-img/title_right.svg" alt=""></span>
+                            <h2 class="sec-title">Request An Appointment</h2>
+                        </div>
+                        <div class="appointment-form wow fadeInUp">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="First Name" name="first_name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Last Name" name="last_name" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Email" name="email_address" class="form-control">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" placeholder="phone" name="phone_number" class="form-control">
+                                </div>
+                                <div class="form-group col-12">
+                                    <select name="service" id="service" class="form-select nice-select">
+                                        <option value="" disabled selected hidden>Select Service</option>
+                                        <option value="Massages">Massages</option>
+                                        <option value="Waxing">Waxing</option>
+                                        <option value="Skincare">Skincare</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                                </div>
+                                <div class="btn-group justify-content-center justify-content-lg-start">
+                                    <button class="th-btn">Make An Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+			Footer Area
+==============================-->
+    <footer class="footer-wrapper footer-layout1">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="{% url 'home' %}"><img src="/static/img/wp_logo_120x117.jpg" alt="White Point"></a>
+                                </div>
+                                <p class="about-text">Reveal Your Radiance: Where Beauty Meets Expertise</p>
+                                <div class="working-time">
+                                    <span class="title">We Are Available:</span>
+                                    <p class="desc">Tue-Sat: 9:00 am to 6:00 pm</p>
+                                </div>
+                                <div class="th-social  footer-social">
+                                    <a href="https://www.facebook.com/profile.php?id=61553164417953"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="https://www.tiktok.com/@kateryvallegalloz?_t=8hLEqWS25p0&_r=1"><ion-icon name="logo-tiktok"></ion-icon></a>
+                                    <a href="https://www.instagram.com/whitepoint_estethic"><ion-icon name="logo-instagram"></ion-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-2">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick link</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                    <li><a href="{% url 'contact' %}">Privacy Policy</a></li>
+                                    <li><a href="{% url 'services' %}">Services</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Contact Details</h3>
+                            <div class="th-widget-about">
+                                <h4 class="footer-info-title">Phone Number</h4>
+                                <p class="footer-info"><ion-icon name="call-outline"></ion-icon><a class="text-inherit" href="tel:+17873616311">+1 787-361-6311</a></p>
+                                <h4 class="footer-info-title">Email Address</h4>
+                                <p class="footer-info"><ion-icon name="mail-outline"></ion-icon><a class="text-inherit" href="mailto:kateryvalle@gmail.com">kateryvalle@gmail.com</a></p>
+                                <h4 class="footer-info-title">Office Location</h4>
+                                <p class="footer-info"><ion-icon name="location-outline"></ion-icon>PR-115 KM .25 Barrio Asomante, Aguada, Puerto Rico 00602</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h4 class="widget_title">Newsletter</h4>
+                            <div class="newsletter-widget">
+                                <p class="md-10">Sign Up to get exclusive deals & news about us directly to your email.</p>
+                                <div class="footer-search-contact mt-25">
+                                    <form>
+                                        <input class="form-control" type="email" placeholder="Enter your email">
+                                    </form>
+                                    <div class="footer-btn mt-10">
+                                        <button type="submit" class="th-btn style3 fw-btn">Subscribe Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="copyright-text text-white">© 2023 <a href="https://themeforest.net/user/themeholy">White Point Esthetic</a>. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="{% url 'contact' %}">Terms & Conditions</a></li>
+                                <li><a href="{% url 'contact' %}">Terms &amp; Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-mockup" data-top="0%" data-left="0%"><img src="/static/img/shape/footer_shape_1.png" alt="shape">
+        </div>
+        <div class="shape-mockup d-none d-xl-block" data-bottom="12%" data-right="0%"><img src="/static/img/shape/footer_shape_2.png" alt="shape"></div>
+    </footer>
+
+
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+
+
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="/static/js/slick.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="/static/js/jquery-ui.min.js"></script>
+    <!-- imagesloaded  -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <!-- odometer -->
+    <script src="/static/js/odometer.js"></script>
+    <!-- appear -->
+    <script src="/static/js/appear-2.js"></script>
+    <!-- Nice Select -->
+    <script src="/static/js/nice-select.min.js"></script>
+    <!-- datetimepicker -->
+    <script src="/static/js/jquery.datetimepicker.min.js"></script>
+
+    <!-- tilt -->
+    <script src="/static/js/tilt.min.js"></script>
+    <!-- wow -->
+    <script src="/static/js/wow.min.js"></script>
+    <!-- Main Js File -->
+    <script src="/static/js/main.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

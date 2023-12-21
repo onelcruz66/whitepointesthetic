@@ -1,0 +1,83 @@
+{% extends "base.html" %} {% block title %} Gallery {% endblock %}
+{% block content %}
+<div class="breadcumb-wrapper " data-bg-src="/static/img/camera_background_1920x800.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h2 class="breadcumb-title">Photo Gallery</h2>
+            
+        </div>
+    </div>
+</div>
+
+<div class="overflow-hidden space">
+    <div class="container">
+        <div class="row gallery-row filter-active">
+            <div class="col-md-6 col-xl-auto filter-item cat1 cat2 cat5 cat4 cat3">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_ac_491x755.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat5 cat9 cat8 cat10">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_bed2_699x400.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat7 cat6">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_meditate_387x325.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat9 cat7 cat4">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_mirror2_282x325.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat1 cat3 cat4 cat5">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_mirror_699x400.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat6 cat8 cat10">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_lights_491x755.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat2 cat10">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_all_282x325.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-auto filter-item cat10 cat5">
+                <div class="gallery-card wow fadeInUp">
+                    <div class="gallery-img">
+                        <img src="/static/img/gallery/wp_bed_387x325.jpg" alt="gallery image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="th-pagination text-center mt-60 mb-0">
+            <ul>
+                <li><a href="{% url 'gallery' %}"><ion-icon name="arrow-back-outline"></ion-icon></a></li>
+                <li><a href="{% url 'gallery' %}">1</a></li>
+                <li><a href="{% url 'gallery' %}">2</a></li>
+                <li><a href="{% url 'gallery' %}"><ion-icon name="arrow-forward-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

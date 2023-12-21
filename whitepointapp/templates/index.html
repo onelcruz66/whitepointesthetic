@@ -1,3 +1,4 @@
+{% load widget_tweaks %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -113,7 +114,7 @@
                     <div class="col-auto d-none d-lg-block">
                         <div class="header-links">
                             <ul>
-                                <li><ion-icon name="call-outline"></ion-icon><a href="tel: +17873616311">+1 787-361-6311</a></li><!-- <i class="far fa-phone"></i> -->
+                                <li><ion-icon name="call-outline"></ion-icon><a href="tel: +17873616311">+1 787-361-6311</a></li>
                                 <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:kateryvalle@gmail.com">kateryvalle@gmail.com</a></li>
                                 <li><ion-icon name="timer-outline"></ion-icon>Tue - Sat: 9 AM - 6 PM </li>
                             </ul>
@@ -559,37 +560,35 @@ Appointment Area
                             <h2 class="sec-title">Request An Appointment</h2>
                         </div>
                         <div class="appointment-form wow fadeInUp">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" placeholder="First Name" name="first_name" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" placeholder="Last Name" name="last_name" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" placeholder="Email" name="email_address" class="form-control">
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="text" placeholder="phone" name="phone_number" class="form-control">
-                                </div>
-                                <div class="form-group col-12">
-                                    <select name="service" id="service" class="form-select nice-select">
-                                        <option value="" disabled selected hidden>Select Service</option>
-                                        <option value="Massages">Massages</option>
-                                        <option value="Waxing">Waxing</option>
-                                        <option value="Skincare">Skincare</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-12">
-                                    <input type="text" class="date-pick form-control" name="date" id="date-pick" placeholder="Select Date">
-                                </div>
-                                <div class="form-group col-12">
-                                    <input type="text" class="time-pick form-control" name="time" id="time-pick" placeholder="Select Time">
+                            <form action="/" method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        {% render_field form.first_name placeholder="First Name" class+="form-control" %}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {% render_field form.last_name placeholder="Last Name" class+="form-control" %}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {% render_field form.email_address placeholder="Email Address" class+="form-control" %}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {% render_field form.phone_number placeholder="Phone Number" class+="form-control" %}
+                                    </div>
+                                    <div class="form-group col-12">
+                                        {% render_field form.service placeholder="Service" class+="form-control" %}
+                                    </div>
+                                    <div class="form-group col-12">
+                                        {% render_field form.date placeholder="Select Date" class+="date-pick form-control" %}
+                                    </div>
+                                    <div class="form-group col-12">
+                                        {% render_field form.time placeholder="Select Time" class+="time-pick form-control" %}
+                                    </div>
                                 </div>
                                 <div class="btn-group justify-content-center justify-content-lg-start">
-                                    <button class="th-btn">Make An Appointment</button>
+                                    <button type="submit" class="th-btn">Make An Appointment</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
