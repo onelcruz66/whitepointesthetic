@@ -28,3 +28,17 @@ class MessageRequest(models.Model):
     phone_number = models.CharField(max_length=50, blank=False, default='')
     service = models.CharField(max_length=50, choices=MessageType.choices, default='')
     text_content = models.TextField(max_length=200, null=False, blank=False)
+
+class ApprovedServiceType(models.TextChoices):
+    MASSAGE = 'Massage', _('Massage')
+    WAXING = 'Waxing', _('Waxing')
+    SKINCARE = 'Skincare', _('Skincare')
+
+class ApprovedAppointments(models.Model):
+    first_name = models.CharField(max_length=50, null=False, blank=False)
+    last_name = models.CharField(max_length=50, null=False, blank=False)
+    email_address = models.CharField(max_length=50, blank=False, default='')
+    phone_number = models.CharField(max_length=50, blank=False, default='') 
+    service = models.CharField(max_length=50, choices=ApprovedServiceType.choices, default='')
+    date = models.CharField(max_length=50, blank=False, default='')
+    time = models.CharField(max_length=50, blank=False, default='')

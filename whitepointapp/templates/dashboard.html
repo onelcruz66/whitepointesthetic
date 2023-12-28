@@ -1,0 +1,126 @@
+{% extends "admin-base.html" %} {% block title %} Admin Dashboard {% endblock %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="breadcumb-wrapper " data-bg-src="/static/img/wp_blackwhitemassage_1920x800.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h2 class="breadcumb-title">Admin Dashboard</h2>
+        </div>
+    </div>
+</div>
+<h1>Requested Appointments</h1>
+<button id="toggle-button" class="toggle-button">Show All Columns</button>
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in request_appointment_table %}
+        <tr>
+            <td>{{ appointment.first_name }}</td>
+            <td>{{ appointment.last_name }}</td>
+            <td>{{ appointment.email_address }}</td>
+            <td>{{ appointment.phone_number }}</td>
+            <td>{{ appointment.service }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+            <td>
+                <form method="post" action="{% url 'delete_appointment' appointment.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn" name="delete-button">
+                        <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </form>
+                <form method="post" action="{% url 'accept_appointment' appointment.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="accept-btn" name="accept-button">
+                        <ion-icon name="checkbox-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1>Approved Appointments</h1>
+<button id="toggle-button2" class="toggle-button2">Show All Columns</button>
+<table id="data-table2">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in approved_appointment_table %}
+        <tr>
+            <td>{{ appointment.first_name }}</td>
+            <td>{{ appointment.last_name }}</td>
+            <td>{{ appointment.email_address }}</td>
+            <td>{{ appointment.phone_number }}</td>
+            <td>{{ appointment.service }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+            <td>
+                <form method="post" action="{% url 'delete_approved_appointment' appointment.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn" name="delete-button">
+                        <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1>Messages</h1>
+<button id="toggle-button3" class="toggle-button3">Show All Columns</button>
+<table id="data-table3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Service</th>
+            <th>Message</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for message in message_request_table %}
+        <tr>
+            <td>{{ message.full_name }}</td>
+            <td>{{ message.email_address }}</td>
+            <td>{{ message.phone_number }}</td>
+            <td>{{ message.service }}</td>
+            <td>{{ message.text_content }}</td>
+            <td>
+                <form method="post" action="{% url 'delete_message' message.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn" name="delete-button">
+                        <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
